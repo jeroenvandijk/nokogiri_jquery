@@ -11,8 +11,3 @@ World do
   Steam::Session::Rails.new(browser)
 end
 
-Before do
-  ActiveRecord::Base.send(:subclasses).each do |model|
-    model.connection.execute("DELETE FROM #{model.table_name}")
-  end
-end
