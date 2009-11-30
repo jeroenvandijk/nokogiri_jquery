@@ -4,7 +4,7 @@ end
 
 Then /^I should get the same results using JQuery and Nokogiri for selector "([^\"]*)"$/ do |selector|
   jquery = jquery_dom(selector)
-  raise "Make sure JQuery supports '#{selector}' and test it in the browser at http://localhost:3000/jquery.html" if jquery.empty?
+  raise "JQuery selector was empty. Test $(\"#{selector}\") in the browser at http://localhost:3000/jquery.html" if jquery.empty?
   nokogiri_dom(selector).should == jquery
 end
 
