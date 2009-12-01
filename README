@@ -1,1 +1,11 @@
-Coming ...
+This repository contains cucumber features that the describe the (in)compatibility between Nokogiri and JQuery.
+
+Run
+
+  script/server -e cucumber
+  
+And then another terminal
+
+  cucumber
+
+

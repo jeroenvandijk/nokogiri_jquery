@@ -18,25 +18,29 @@ Feature: JQuery selectors for Nokogiri
     | li[name]                   |
     | li[name='special']         |
     | li[name^='spec']           |
-    
+    | li:has(p[name='nested'])   |
+    | li[name!='special']        |
+
+  Scenarios: Supported but with different behaviour
+    | li:eq(3)                       |
+    | li:gt(3)                       |
+    | li[name!='none-existing-name'] |
+
   Scenarios: Not yet supported
     | selector                    |
+    | li:not(p[name='nested'])    |
     | li:not(li:last)             |
     | li:even                     |
     | li:odd                      |
-    | li:eq(3)                    |
-    | li:gt(3)                    |
     | li:lt(3)                    |
     | li:header                   |
-    | li:animated                 |
     | li:empty                    |
     | li:has(p:contains('Hello')) |
     | li:hidden                   |
     | li:visible                  |
-    | li[name!='special']         |
-
-
     
+  Scenarios: Unsupported but for a good reason
+    | li:animated                 |
     
     
     
