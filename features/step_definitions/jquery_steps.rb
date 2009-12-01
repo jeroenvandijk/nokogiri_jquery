@@ -4,7 +4,7 @@ end
 
 Then /^I should get the same results using JQuery and Nokogiri for selector "([^\"]*)"$/ do |selector|
   jquery = jquery_dom(selector)
-  if jquery.empty? && !selector.strip =~ /:empty$/
+  if jquery.empty? && !(selector.strip =~ /:empty$/)
     raise "The JQuery result was empty. Test $(\"#{selector}\") in the browser at http://localhost:3000/jquery.html"
   end
 

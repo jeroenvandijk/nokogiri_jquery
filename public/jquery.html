@@ -7,15 +7,25 @@
       <h1>My awesome task list</h1>
       <p>aka the Steam demo application</p>
       <ul id="lists">
-        <li name="normal">This is the first</li>
-        <li class="date">Hello</li>
-        <li class="other_date" name="special">List item 2</li>
-        <li><p name="nested"></p></li>
+        <li name="normal">List item 1</li>
+        <li class="date">List item 2</li>
+        <li class="other_date" name="special">List item 3</li>
+        <li class="date">
+          <fieldset>
+            <legend><span>List item 4</span></legend>
+            <ol>
+              <li>
+                <select>
+                  <option selected>1</option>
+                  <option>2</option>
+                </select>
+              </li>
+            </ol>
+          </fieldset>
+        </li>
+        <li><p name="nested">List item 5</p></li>
         <li class="empty_node">&nbsp;</li>
       </ul>  
-      <p>
-        <a href="/lists/new" id="add_list">Add list</a>
-      </p>
     </div>
   <body>
 <html>
